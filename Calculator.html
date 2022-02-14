@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>COMPUTE</title>
+
+    <!-- CSS  -->
+
+</head>
+<body>
+    <!-- html -->
+    
+    <input type="text" id="n1">
+    <input type="text" id="n2">
+
+    <button id="add">+</button>
+    <button id="minus">-</button>
+    <button id="multiply">x</button>
+    <button id="divide">/</button>
+    <button id="modulus">%</button>
+
+    <h2 id="result"></h2>
+</body>
+
+<!-- JavasCrip -->
+<script>
+    // Plus Operation
+    add_btn = document.getElementById("add");
+    add_operation = function () {
+        n1 = document.getElementById("n1");
+        n2 = document.getElementById("n2");
+
+        sum = parseInt(n1.value) + parseInt(n2.value);
+
+        input = n1.value + " " + "+" + " " + n2.value + " " + "=" + " ";
+        result = document.getElementById("result");
+        result.innerText = input + sum;
+    }
+
+    add_btn.addEventListener("click", add_operation);
+
+
+    // Minus Operation
+    minus_btn = document.getElementById("minus");
+    minus_operation = function () {
+        n1 = document.getElementById("n1");
+        n2 = document.getElementById("n2");
+
+        differnce = parseInt(n1.value) - parseInt(n2.value);
+
+        input = n1.value + " " + "-" + " " + n2.value + " " + "=" + " ";
+        result = document.getElementById("result");
+        result.innerText = input + differnce;
+    }
+
+    minus_btn.addEventListener("click", minus_operation);
+
+    // Multiplication
+    multiply_btn = document.getElementById("multiply");
+    multiply_operation = function () {
+        n1 = document.getElementById("n1");
+        n2 = document.getElementById("n2");
+
+        product = parseInt(n1.value) * parseInt(n2.value);
+
+        input = n1.value + " " + "x" + " " + n2.value + " " + "=" + " ";
+        result = document.getElementById("result");
+        result.innerText = input + product;
+    }
+
+    multiply_btn.addEventListener("click", multiply_operation);
+
+
+
+    // Division
+    divide_btn = document.getElementById("divide");
+    divide_operation = function () {
+        n1 = document.getElementById("n1");
+        n2 = document.getElementById("n2");
+
+        quotient = parseInt(n1.value) / parseInt(n2.value);
+
+        input = n1.value + " " + "/" + " " + n2.value + " " + "=" + " ";
+        result = document.getElementById("result");
+        result.innerText = input + quotient;
+    }
+
+    divide_btn.addEventListener("click", divide_operation);
+
+
+    // Modulus
+    modulus_btn = document.getElementById("modulus");
+    modulus_operation = function () {
+        n1 = document.getElementById("n1");
+        n2 = document.getElementById("n2");
+
+        remainder = parseInt(n1.value) % parseInt(n2.value);
+
+        input = n1.value + " " + "%" + " " + n2.value + " " + "=" + " ";
+        result = document.getElementById("result");
+        result.innerText = input + remainder;
+    }
+
+    modulus_btn.addEventListener("click", modulus_operation);
+
+
+</script>
+
+
+</html>
